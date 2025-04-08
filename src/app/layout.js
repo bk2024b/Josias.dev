@@ -15,13 +15,13 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Josias.dev | Full-Stack Web Developer",
-  description: "Portfolio of Josias Boco, a skilled full-stack web developer specializing in React, Next.js, and modern web technologies.",
+  title: "Josias.dev | Développeur Web Full-Stack",
+  description: "Portfolio de Josias Boco, un développeur web full-stack spécialisé en React, Next.js et technologies web modernes.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth dark" lang="fr">
       <body
         className={`${outfit.variable} ${ovo.variable} font-outfit antialiased leading-8 overflow-x-hidden`}
       >

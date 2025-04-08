@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTheme } from './ThemeProvider';
 
 const Logo = () => (
@@ -15,7 +15,7 @@ const Logo = () => (
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,10 +27,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { text: 'Home', href: '#' },
-    { text: 'About', href: '#about' },
+    { text: 'Accueil', href: '#' },
+    { text: 'À propos', href: '#about' },
     { text: 'Services', href: '#services' },
-    { text: 'Work', href: '#work' },
+    { text: 'Projets', href: '#work' },
     { text: 'Contact', href: '#contact' },
   ];
 
@@ -38,7 +38,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full px-[8%] py-4 z-50 transition-all duration-300 
         ${scrolled 
-          ? 'bg-white/90 backdrop-blur-sm dark:bg-gray-900/90' 
+          ? 'bg-gray-900/90 backdrop-blur-sm' 
           : 'bg-transparent'}`}
     >
       <div className='flex items-center justify-between'>
@@ -56,35 +56,10 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li>
-            <button 
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              className='p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors'
-            >
-              {theme === 'dark' ? (
-                <FaSun className="text-yellow-400" />
-              ) : (
-                <FaMoon />
-              )}
-            </button>
-          </li>
         </ul>
 
-        {/* Mobile Menu Button and Theme Toggle */}
+        {/* Mobile Menu Button */}
         <div className='flex items-center gap-4 md:hidden'>
-          <button 
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-            className='p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors'
-          >
-            {theme === 'dark' ? (
-              <FaSun className="text-yellow-400" />
-            ) : (
-              <FaMoon />
-            )}
-          </button>
-          
           <button 
             className='text-2xl' 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -96,7 +71,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className='md:hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm absolute top-full left-0 w-full shadow-md py-4'>
+        <div className='md:hidden bg-gray-900/90 backdrop-blur-sm absolute top-full left-0 w-full shadow-md py-4'>
           <ul className='flex flex-col items-center gap-4'>
             {navLinks.map((link, index) => (
               <li key={index}>
