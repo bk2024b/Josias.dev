@@ -10,7 +10,7 @@ const Header = () => {
           Hi, I'm <span className='text-blue-600 dark:text-blue-500'>Josias Boco</span>
         </h1>
         <h2 className='text-2xl md:text-3xl mb-6 font-ovo'>Full-Stack Web Developer</h2>
-        <p className='text-gray-700 dark:text-gray-300 mb-8 max-w-lg font-ovo'>
+        <p className='text-gray-800 dark:text-gray-200 mb-8 max-w-lg font-ovo'>
           I build responsive, user-friendly web applications that drive business growth and deliver exceptional user experiences.
         </p>
         <div className='flex flex-wrap gap-4'>

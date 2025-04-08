@@ -38,7 +38,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full px-[8%] py-4 z-50 transition-all duration-300 
         ${scrolled 
-          ? 'bg-white dark:bg-gray-900 shadow-md' 
+          ? 'bg-white/90 backdrop-blur-sm dark:bg-gray-900/90' 
           : 'bg-transparent'}`}
     >
       <div className='flex items-center justify-between'>
@@ -96,7 +96,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className='md:hidden bg-white dark:bg-gray-900 absolute top-full left-0 w-full shadow-md py-4'>
+        <div className='md:hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm absolute top-full left-0 w-full shadow-md py-4'>
           <ul className='flex flex-col items-center gap-4'>
             {navLinks.map((link, index) => (
               <li key={index}>

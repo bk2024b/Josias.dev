@@ -17,7 +17,7 @@ const About = () => {
                   <p className='mb-10 max-w-2xl font-ovo text-foreground'>
                     I'm Josias Boco, a passionate web developer specializing in creating responsive and interactive digital experiences. With a strong foundation in both front-end and back-end technologies, I transform ideas into elegant, functional websites and applications. My approach combines technical precision with creative problem-solving to deliver solutions that exceed expectations.
                   </p>
-                  <h4 className='my-6 text-gray-700 dark:text-gray-300 font-ovo'>Technologies I work with</h4>
+                  <h4 className='my-6 text-gray-800 dark:text-gray-200 font-ovo'>Technologies I work with</h4>
                   <ul className='flex flex-wrap items-center gap-5 mb-8'>
                       <li className='flex flex-col items-center'>
                         <FaHtml5 size={40} className="text-orange-600" />
@@ -44,7 +44,7 @@ const About = () => {
                         <span className='mt-1'>Next.js</span>
                       </li>
                   </ul>
-                  <h4 className='my-6 text-gray-700 dark:text-gray-300 font-ovo'>Tools I use</h4>
+                  <h4 className='my-6 text-gray-800 dark:text-gray-200 font-ovo'>Tools I use</h4>
                   <ul className='flex flex-wrap items-center gap-3 sm:gap-5'>
                     <li className='flex flex-col items-center'>
                       <VscCode size={30} className="text-blue-500" />
@@ -59,7 +59,7 @@ const About = () => {
                       <span className='mt-1'>Git</span>
                     </li>
                     <li className='flex flex-col items-center'>
-                      <SiGithub size={30} className="dark:text-white" />
+                      <SiGithub size={30} className="text-black dark:text-white" />
                       <span className='mt-1'>GitHub</span>
                     </li>
                   </ul>
