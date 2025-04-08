@@ -1,38 +1,41 @@
-import Image from 'next/image'
-import React from 'react'
+import React from 'react';
+import { FaDownload, FaArrowRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Header = () => {
   return (
-      <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
-          <div>
-            <Image src='/josias.png' width={128} height={128} alt='Josias' className='rounded-full w-32' />
-          </div> 
-          <h3 className='flex items-center justify-center gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
-            Hi! I'm Josias BOCO
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </h3> 
-          <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo leading-tight'>Full-Stack Web Developer</h1>
-          <p className='max-w-2xl mx-auto font-Ovo text-gray-700 mt-2'>
-            I craft responsive, elegant web experiences that combine compelling design with clean, efficient code. Passionate about transforming ideas into digital reality.
-          </p>
-          <div className='flex flex-col sm:flex-row items-center gap-4 mt-6'>
-            <a href="#contact" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 hover:bg-gray-800 transition duration-300'>
-              Contact me 
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-            <a href="#work" className='px-10 py-3 border border-gray-300 rounded-full flex items-center gap-2 hover:border-gray-600 transition duration-300'>
-              View my work
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
-          </div>
+    <div className='w-full px-[12%] py-20 flex flex-col md:flex-row items-center justify-between gap-10'>
+      <div className='flex-1'>
+        <h1 className='text-5xl md:text-6xl font-bold mb-6 font-Ovo'>
+          Hi, I'm <span className='text-blue-600'>Josias Boco</span>
+        </h1>
+        <h2 className='text-2xl md:text-3xl mb-6 font-Ovo'>Full-Stack Web Developer</h2>
+        <p className='text-gray-700 mb-8 max-w-lg font-Ovo'>
+          I build responsive, user-friendly web applications that drive business growth and deliver exceptional user experiences.
+        </p>
+        <div className='flex flex-wrap gap-4'>
+          <a 
+            href='#contact' 
+            className='py-3 px-6 bg-black text-white rounded-full flex items-center gap-2 hover:bg-black/80 transition-colors'
+          >
+            Get in touch <FaArrowRight />
+          </a>
+          <a 
+            href='/resume.pdf' 
+            download 
+            className='py-3 px-6 border border-black rounded-full flex items-center gap-2 hover:bg-gray-100 transition-colors'
+          >
+            Download CV <FaDownload />
+          </a>
+        </div>
+      </div>
+      <div className='flex-1 flex justify-center'>
+        <div className='relative w-80 h-80 rounded-full bg-gray-100 overflow-hidden border-4 border-white shadow-lg'>
+          <Image src='/josias-profile.png' alt='Josias Boco' layout='fill' objectFit='cover' />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
