@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
-import { useTheme } from 'ThemeProvider';
+import { useTheme } from './ThemeProvider';
 
 const Logo = () => (
   <div className="flex items-center">
