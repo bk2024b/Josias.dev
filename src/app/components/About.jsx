@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaReact } from 'react-icons/fa';
-import { SiNextdotjs, SiVisualstudiocode, SiSupabase, SiGit, SiGithub } from 'react-icons/si';
+import { SiNextdotjs, SiSupabase, SiGit, SiGithub } from 'react-icons/si';
+import { VscCode } from 'react-icons/vsc'; // Utilisons VSCode depuis react-icons/vsc à la place
 
 const About = () => {
   return (
@@ -46,7 +47,7 @@ const About = () => {
                   <h4 className='my-6 text-gray-700 font-Ovo'>Tools I use</h4>
                   <ul className='flex flex-wrap items-center gap-3 sm:gap-5'>
                     <li className='flex flex-col items-center'>
-                      <SiVisualstudiocode size={30} className="text-blue-500" />
+                      <VscCode size={30} className="text-blue-500" />
                       <span className='mt-1'>VS Code</span>
                     </li>
                     <li className='flex flex-col items-center'>
