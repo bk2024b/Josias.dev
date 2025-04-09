@@ -30,7 +30,7 @@ const ProjectCard = ({ image, title, description, technologies, githubLink, live
 const Work = () => {
   const projects = [
     {
-      image: '/projects/project1.jpg',
+      image: '/projects/project1.png',
       title: 'Mini Blog Tech',
       description: 'Un blog minimaliste dédié aux actualités et tutoriels technologiques avec un design élégant et intuitif.',
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'Supabase'],
@@ -38,10 +38,10 @@ const Work = () => {
       liveLink: 'https://mini-blog-tech.vercel.app/'
     },
     {
-      image: '/projects/project2.jpg',
+      image: '/projects/project2.png',
       title: 'Application de Gestion de Tâches',
       description: 'Un outil de productivité pour organiser les tâches avec des mises à jour en temps réel et la collaboration d\'équipe.',
-      technologies: ['React', 'Firebase', 'CSS Modules'],
+      technologies: ['React', 'Next.js', 'Tailwind CSS'],
       githubLink: 'https://github.com/bk2024b/tasks_tracker',
       liveLink: 'https://tasks-tracker-delta.vercel.app/'
     }
