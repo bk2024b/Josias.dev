@@ -16,9 +16,7 @@ const Footer = () => {
       <div className='mt-20 bg-gray-900 py-10'>
           <div className='text-center flex flex-col items-center'>
               <div className='mb-4'>
-          <Image src="" alt="Josias Boco" width={80} height={40}>
-            <Logo />
-                </Image>
+               <Logo />
               </div>
               <div className='flex items-center justify-center gap-2'>
                 <FaEnvelope className="text-gray-300" />
