@@ -34,16 +34,16 @@ const Work = () => {
       title: 'Mini Blog Tech',
       description: 'Un blog minimaliste dédié aux actualités et tutoriels technologiques avec un design élégant et intuitif.',
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'Supabase'],
-      githubLink: 'https://github.com/josiasboco/tech-blog',
-      liveLink: 'https://tech-blog.vercel.app'
+      githubLink: 'https://github.com/bk2024b/Mini_blog_tech',
+      liveLink: 'https://mini-blog-tech.vercel.app/'
     },
     {
       image: '/projects/project2.jpg',
       title: 'Application de Gestion de Tâches',
       description: 'Un outil de productivité pour organiser les tâches avec des mises à jour en temps réel et la collaboration d\'équipe.',
       technologies: ['React', 'Firebase', 'CSS Modules'],
-      githubLink: 'https://github.com/josiasboco/task-manager',
-      liveLink: 'https://task-manager-app.vercel.app'
+      githubLink: 'https://github.com/bk2024b/tasks_tracker',
+      liveLink: 'https://tasks-tracker-delta.vercel.app/'
     }
   ];
 
