@@ -15,7 +15,7 @@ const About = () => {
               </div>
               <div className='flex-1'>
                   <p className='mb-10 max-w-2xl font-ovo text-foreground'>
-                    Je suis Josias Boco, un développeur web passionné spécialisé dans la création d'expériences numériques réactives et interactives. Avec une solide base en technologies front-end et back-end, je transforme des idées en sites web et applications élégants et fonctionnels. Mon approche combine précision technique et résolution créative de problèmes pour fournir des solutions qui dépassent les attentes.
+                    Je suis Josias Boco, développeur web passionné par la création d'expériences numériques fluides, interactives et sur-mesure. Mon objectif : transformer vos idées en solutions digitales élégantes et performantes. Grâce à une maîtrise des technologies front-end et back-end, j'apporte à chaque projet une attention particulière à la qualité du code et à l'expérience utilisateur. J'aime relever les défis et trouver des solutions créatives pour dépasser les attentes de mes clients. Chaque projet est pour moi l'occasion d'aller plus loin, d'innover et de livrer des applications aussi esthétiques qu'efficaces.
                   </p>
                   <h4 className='my-6 text-gray-200 font-ovo'>Technologies avec lesquelles je travaille</h4>
                   <ul className='flex flex-wrap items-center gap-5 mb-8'>
@@ -63,6 +63,9 @@ const About = () => {
                       <span className='mt-1'>GitHub</span>
                     </li>
                   </ul>
+                  <p className='mt-6 font-ovo text-gray-200'>
+                    Une <strong>veille technologique constante</strong> pour rester à la pointe des dernières innovations du web et intégrer des solutions toujours plus performantes à vos projets.
+                  </p>
               </div>
           </div>
       </div>

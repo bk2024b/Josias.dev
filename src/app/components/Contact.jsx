@@ -5,9 +5,12 @@ const Contact = () => {
   return (
       <div id='contact' className='w-full px-[12%] py-10 scroll-mt-20'>
           <h4 className='text-center mb-2 text-lg font-Ovo'>Contactez-moi</h4>
-          <h2 className='text-center text-5xl font-Ovo'>Entrer en contact</h2>
-          <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-gray-200'>
-              Vous avez un projet en tête ou souhaitez simplement discuter de développement web ? Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter en utilisant le formulaire ci-dessous, et je vous répondrai dès que possible.
+          <h2 className='text-center text-5xl font-Ovo'>Entrons en contact</h2>
+          <p className='text-center max-w-2xl mx-auto mt-5 mb-8 font-Ovo text-gray-200'>
+              Vous avez un projet en tête ou simplement envie d'échanger autour du développement web ? Je suis toujours à l'écoute de nouvelles idées, opportunités et collaborations. Remplissez le formulaire ci-dessous et je reviendrai vers vous rapidement.
+          </p>
+          <p className='text-center max-w-2xl mx-auto mb-12 font-Ovo text-blue-500 font-bold text-lg'>
+              Je suis là pour transformer vos idées en réalité numérique.
           </p>
           <form className='max-w-2xl mx-auto'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8'>
