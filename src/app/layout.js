@@ -1,6 +1,8 @@
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "./components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react"
+
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -22,6 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth dark" lang="fr">
+      <Analytics/>
       <body
         className={`${outfit.variable} ${ovo.variable} font-outfit antialiased leading-8 overflow-x-hidden`}
       >
