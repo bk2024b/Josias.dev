@@ -2,12 +2,23 @@ import React from 'react';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
+
+const Logo = () => (
+  <div className="flex items-center">
+    <span className="font-ovo text-xl font-bold">
+      Josias<span className="text-blue-500">.</span>
+    </span>
+  </div>
+);
+
 const Footer = () => {
   return (
       <div className='mt-20 bg-gray-900 py-10'>
           <div className='text-center flex flex-col items-center'>
               <div className='mb-4'>
-                <Image src="/josias.png" alt="Josias Boco" width={80} height={40} />
+          <Image src="" alt="Josias Boco" width={80} height={40}>
+            <Logo />
+                </Image>
               </div>
               <div className='flex items-center justify-center gap-2'>
                 <FaEnvelope className="text-gray-300" />
