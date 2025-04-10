@@ -24,7 +24,7 @@ const Contact = () => {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Formulaire envoyée avec succès.");
+            setResult("Formulaire envoyé avec succès.");
             event.target.reset();
         } else {
             console.log("Erreur", data);
@@ -51,7 +51,9 @@ const Contact = () => {
               <button className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-blue-600 text-white rounded-full mx-auto hover:bg-blue-700 duration-500' type='submit'>
                 Envoyer <FaArrowRight />
               </button> 
-              <p className='text-center mt-4 text-gray-500 hidden'>{result}</p>
+              {result && (
+                <p className='text-center mt-4 font-Ovo text-green-500 font-medium'>{result}</p>
+              )}
           </form>
       </div>
   )
