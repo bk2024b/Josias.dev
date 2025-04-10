@@ -11,7 +11,7 @@ const Contact = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setDefaultResultOrder("Envoi....");
+        setResult("Envoi....");
         const formData = new FormData(event.target);
 
         formData.append("access_key", "67acd708-20a2-40f3-aa9f-2e436a8241b4");
