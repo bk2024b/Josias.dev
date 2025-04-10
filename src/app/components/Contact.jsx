@@ -1,7 +1,10 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { useState } from 'react';
+
 
 const Contact = () => {
+
   return (
       <div id='contact' className='w-full px-[12%] py-10 scroll-mt-20'>
           <h4 className='text-center mb-2 text-lg font-Ovo'>Contactez-moi</h4>
@@ -12,16 +15,19 @@ const Contact = () => {
           <p className='text-center max-w-2xl mx-auto mb-12 font-Ovo text-blue-500 font-bold text-lg'>
               Je suis là pour transformer vos idées en réalité numérique.
           </p>
-          <form className='max-w-2xl mx-auto'>
+          <form action="https://api.web3forms.com/submit" method="POST" className='max-w-2xl mx-auto'>
+            <input type="hidden" name="access_key" value="67acd708-20a2-40f3-aa9f-2e436a8241b"/>
+
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8'>
-                  <input className='flex-1 p-3 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200' type="text" placeholder='Entrez votre nom' required/>
-                  <input className='flex-1 p-3 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200' type="email" placeholder='Entrez votre email' required />
+                  <input className='flex-1 p-3 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200' name='name' type="text" placeholder='Entrez votre nom' required/>
+                  <input className='flex-1 p-3 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200' name='email' type="email" placeholder='Entrez votre email' required />
               </div>
-              <textarea className='w-full p-4 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200 mb-6' rows='6' placeholder='Entrez votre message' required></textarea>
+              <textarea className='w-full p-4 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200 mb-6' rows='6' name='message' placeholder='Entrez votre message' required></textarea>
+              <input type="hidden" name="redirect" value="https://josias-dev.vercel.app/#contact"/> 
               <button className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-blue-600 text-white rounded-full mx-auto hover:bg-blue-700 duration-500' type='submit'>
                 Envoyer <FaArrowRight />
               </button> 
-              <p className='text-center mt-4 text-gray-500 hidden'>Envoi en cours...</p>
+              <p className='text-center mt-4 text-gray-500 hidden'>{result}</p>
           </form>
       </div>
   )
