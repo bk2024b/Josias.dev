@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import { useState } from 'react';
+
 
 
 const Contact = () => {
