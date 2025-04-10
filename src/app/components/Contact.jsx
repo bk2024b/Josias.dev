@@ -16,7 +16,7 @@ const Contact = () => {
               Je suis là pour transformer vos idées en réalité numérique.
           </p>
           <form action="https://api.web3forms.com/submit" method="POST" className='max-w-2xl mx-auto'>
-            <input type="hidden" name="access_key" value="67acd708-20a2-40f3-aa9f-2e436a8241b"/>
+            <input type="hidden" name="access_key" value="67acd708-20a2-40f3-aa9f-2e436a8241b4"/>
 
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8'>
                   <input className='flex-1 p-3 outline-none border-[0.5px] border-gray-600 rounded-md bg-gray-800 text-gray-200' name='name' type="text" placeholder='Entrez votre nom' required/>
