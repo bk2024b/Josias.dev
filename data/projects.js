@@ -8,7 +8,7 @@ export const projects = [
       "An interactive timeline exploring the evolution of smartphones, brands and devices through time.",
     category: "Products",
     image: "/images/projects/phonetimeline.png",
-    url: "https://phonetimeline.com",
+    url: "https://phonetimeline.vercel.app",
     github: "",
     technologies: ["Next.js", "Tailwind CSS", "Supabase", "Motion"],
     featured: true,
