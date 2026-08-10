@@ -19,7 +19,7 @@ export function TechStack() {
             </p>
             <div className="flex flex-col gap-2.5">
               {group.items.map((item) => (
-                <TechCard key={item.name} name={item.name} />
+                <TechCard key={item.name} name={item.name} icon={item.icon} />
               ))}
             </div>
           </div>

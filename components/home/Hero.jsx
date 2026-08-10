@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/shared/Button";
 import { Badge } from "@/components/shared/Badge";
 import { SocialLink } from "@/components/shared/SocialLink";
@@ -45,9 +46,14 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-sm animate-fade-in [animation-delay:150ms] opacity-0 [animation-fill-mode:forwards]">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border bg-surface">
-            <div className="absolute inset-0 flex items-center justify-center text-sm text-foreground-muted">
-              Photo of Josias
-            </div>
+            <Image
+              src="/images/profile/josias.jpg"
+              alt="Josias"
+              fill
+              sizes="(min-width: 1024px) 384px, 100vw"
+              className="object-cover"
+              priority
+            />
           </div>
 
           <div className="absolute -bottom-8 -left-6 w-64 rounded-xl border border-border bg-surface/95 p-4 shadow-2xl shadow-black/40 backdrop-blur sm:-left-10">
