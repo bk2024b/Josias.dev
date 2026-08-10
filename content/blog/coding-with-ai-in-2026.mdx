@@ -1,0 +1,30 @@
+---
+title: "What a perfect PageSpeed score says about building with AI in 2026"
+slug: "coding-with-ai-in-2026"
+excerpt: "This site scored 100 on Performance, Accessibility, Best Practices and SEO — built with AI as a daily collaborator. Here's what that actually tells us, and what it doesn't."
+date: "2026-08-10"
+cover: "/images/blog/coding-with-ai-in-2026.png"
+tags: ["ai", "product", "next.js"]
+---
+
+I ran this site through PageSpeed Insights after shipping the redesign, mostly out of habit. The result: 100 on Performance, 100 on Accessibility, 100 on Best Practices, 100 on SEO — and a 2/2 on the newer "Agentic Browsing" check, which scores how well a page holds up when an AI agent is the one reading and navigating it, not a human.
+
+None of that happened by accident, and none of it happened because I'm an exceptional developer. It happened because building with AI today means the boring, easy-to-skip work — semantic HTML, alt text, lazy loading, correct heading structure, a sitemap, a robots.txt, Server Components by default — stops being the part you cut corners on when you're tired at 11pm. It's just part of the build, every time, because it's cheap to get right from the start.
+
+## What actually changed
+
+A few years ago, a perfect Lighthouse score was a project on its own — an afternoon of profiling, image compression passes, a second look at your bundle. Today it's closer to a default outcome of following good practice from the first commit: static generation where it makes sense, images through `next/image`, fonts self-hosted instead of round-tripping to Google, metadata written per page instead of bolted on at the end.
+
+The interesting part isn't that a score hit 100. It's that hitting 100 barely required deciding to.
+
+## What it doesn't mean
+
+A perfect score is not a finished product. It says nothing about whether the copy is honest, whether the design has a point of view, or whether anyone actually wants to use what's been built. Those are still entirely human calls — what to build, for whom, and why it matters — and no score measures them.
+
+If anything, that's the shift worth naming: the mechanical craft of shipping a fast, accessible, well-structured site is becoming table stakes rather than a differentiator. What's left to differentiate on is judgment — the product decisions, the taste, the restraint to leave things out. That part hasn't gotten any easier, and I don't think it will.
+
+## Where this leaves builders
+
+I'm not interested in the framing where AI replaces the work of building products. What I've found instead is that it removes the tax on doing things properly — the parts of the job that were always "correct" to do but easy to defer. That tax used to buy you an excuse. It doesn't anymore.
+
+This site — the one you're reading this on — is the proof I have on hand today. I'll keep updating this post as that bar keeps moving.
