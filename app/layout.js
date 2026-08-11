@@ -29,6 +29,9 @@ export const metadata = {
     title: "Josias — Developer & Product Builder",
     description: "I build products people enjoy using.",
   },
+  verification: {
+    google: "ZilcoLVCMEUHQtUAAU3aOgfPqvd9MSjazLClBqS-CVA",
+  },
 };
 
 export default function RootLayout({ children }) {
