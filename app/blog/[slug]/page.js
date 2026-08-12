@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 import { CalendarDays, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
@@ -59,6 +60,19 @@ export default async function BlogPostPage({ params }) {
             {post.readingTime}
           </span>
         </div>
+
+        {post.cover && (
+          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-surface">
+            <Image
+              src={post.cover}
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 672px, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
 
         <div className="prose prose-invert prose-p:text-foreground-muted prose-headings:text-foreground prose-a:text-accent prose-strong:text-foreground mt-10 max-w-none">
           <MDXRemote source={post.content} />

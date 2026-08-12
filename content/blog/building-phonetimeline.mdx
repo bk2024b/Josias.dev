@@ -1,7 +1,7 @@
 ---
 title: "Why I built PhoneTimeline"
 slug: "building-phonetimeline"
-excerpt: "The story behind PhoneTimeline — why smartphone history deserved a better home than scattered wiki pages."
+excerpt: "The story behind PhoneTimeline — why smartphone history deserved a better home than scattered wiki pages, and what it took to build one."
 date: "2026-02-14"
 cover: "/images/blog/building-phonetimeline.png"
 tags: ["product", "next.js"]
@@ -11,4 +11,28 @@ I kept finding myself with ten tabs open trying to piece together when a phone a
 
 That annoyance turned into PhoneTimeline: a single, fast, searchable timeline of smartphone history, backed by a real database instead of static pages.
 
-This post will grow into a proper write-up of the build — the data model, the timeline UI, and what I'd do differently.
+## The problem with the existing options
+
+Smartphone history isn't hard to find — it's hard to *browse*. Wikipedia has a page per model, sometimes per brand, rarely linked in a way that lets you move forward and backward through time. Spec-comparison sites are built for shopping, not history, so anything more than three or four years old quietly disappears. Forums have the detail but none of the structure.
+
+What was missing wasn't information. It was a spine to hang it on.
+
+## Designing the data model first
+
+Before writing any interface code, I spent time on the schema. Every device needed to sit inside a consistent shape: a brand, a release date, a set of specs, and a position relative to the models before and after it. That last part — relationships between devices, not just a flat list — turned out to be the whole point. A timeline is only useful if "what came next" is a real, queryable thing, not something implied by sorting a table by date.
+
+I used Supabase for this, mostly because I wanted a real relational database without standing up my own infrastructure. Brands, devices and specs live as separate related tables, which made two things possible later: fast filtering by brand or era, and device pages that can link sideways to predecessors and successors without extra work.
+
+## Building the timeline itself
+
+The interface had one job: make scrolling through years feel as natural as scrolling through a feed. That ruled out a lot of the "infographic" style timelines you see elsewhere — beautiful for a single brand's history, unusable once you're trying to compare across dozens of them.
+
+I built it in Next.js with Tailwind for layout and Motion for the transitions between years and brand filters. Search and filtering run against the Supabase database directly rather than a static index, so new devices show up immediately without a rebuild.
+
+## What was harder than expected
+
+Historical data is messy in ways current data isn't. Release dates get reported differently by region. Some devices were announced months before they actually shipped, and sources disagree on which date "counts." I ended up picking a consistent rule — announcement date, region of origin where available — and documenting it, rather than chasing perfect accuracy that doesn't really exist for older devices.
+
+Performance was the other real constraint. A timeline spanning decades and dozens of brands can turn into a very large page if you're not careful. Pagination by era and lazy-loading images kept it fast without making the browsing experience feel chopped up.
+
+PhoneTimeline is still growing — new devices, brand pages, and comparison views are next. But the core idea held up: history is worth more when you can walk through it, not just look it up.
