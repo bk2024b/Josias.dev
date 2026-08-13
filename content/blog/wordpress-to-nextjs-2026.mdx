@@ -1,0 +1,60 @@
+---
+title: "Why I'm moving client sites off WordPress and onto Next.js"
+slug: "wordpress-to-nextjs-2026"
+excerpt: "WordPress got most sites to the internet for two decades. In 2026, for most of the sites I build, it's no longer the right default — here's the actual case for Next.js, and where WordPress still wins."
+date: "2026-08-12"
+cover: "/images/blog/wordpress-to-nextjs-2026.png"
+tags: ["next.js", "wordpress", "product"]
+---
+
+I've migrated a handful of client sites off WordPress this year, and I keep getting some version of the same question: why bother, when the site already works?
+
+The honest answer is that "it already works" was carrying a lot of weight it shouldn't have. Most of the sites I inherited were slow, plugin-dependent, and one bad update away from breaking — not because WordPress is bad software, but because that's what WordPress sites tend to become after a few years of accumulated plugins, themes, and "quick fixes."
+
+## What WordPress actually costs you
+
+None of these are exotic problems. They're the default trajectory of most WordPress installs after enough time passes:
+
+- **Plugin sprawl.** Every new feature is another plugin, another dependency, another thing that can conflict with an update you didn't ask for.
+- **Performance you have to keep fighting for.** Caching plugins, image optimization plugins, a CDN on top — all bolted on to compensate for a rendering model that wasn't built for speed.
+- **Security surface area.** A CMS this widely used is a widely used target. Most breaches I've seen traced back to an outdated plugin, not WordPress core.
+- **Hosting costs that creep up.** PHP + MySQL hosting that can handle real traffic isn't free, and it scales worse than static or edge-rendered pages.
+
+None of this means WordPress is a bad product — it solved real problems for millions of sites for two decades, and for a lot of use cases it still does.
+
+## Where Next.js actually wins
+
+The case for Next.js isn't "it's newer." It's a handful of concrete differences:
+
+- **Performance by default.** Static generation and server components mean most pages ship as pre-rendered HTML with minimal JavaScript, not a PHP request rebuilding the page every time.
+- **A real component model.** Building a new section means writing a component, not hunting for a plugin that does 80% of what you want and fighting it for the other 20%.
+- **Deploy simplicity.** Push to Git, Vercel builds and deploys it. No FTP, no manual plugin updates, no staging-to-production drift.
+- **Content that isn't locked to one system.** Markdown, MDX, or a headless CMS behind an API — your content isn't welded to WordPress's database schema.
+
+## What you give up
+
+This isn't a one-sided trade, and I don't pretend it is with clients. WordPress still wins on a few things that matter:
+
+- **A non-technical person can edit content themselves**, today, without touching code. That's real, and it's the single biggest reason WordPress remains the right choice for a lot of sites.
+- **The plugin ecosystem is enormous.** E-commerce, membership, forums, booking systems — someone's already built a WordPress plugin for it. On Next.js, you're often building or integrating that yourself.
+- **Lower upfront build cost**, especially for a simple brochure site that doesn't need custom interactions.
+
+If a client mainly needs a handful of pages they can update themselves without a developer in the loop, I still point them to WordPress — or increasingly, a headless CMS paired with Next.js, which gets them most of that editing freedom without the performance and security trade-offs.
+
+## How I approach a migration
+
+For sites that do make the move, the pattern that's worked consistently:
+
+1. **Audit the content first, not the design.** Every page type, every custom field, every piece of content that actually gets used — versus what's just sitting there from a redesign three years ago.
+2. **Pick a content source.** For content that changes often and needs a non-technical editor, a headless CMS. For content that changes rarely, MDX files in the repo are simpler and remove a dependency entirely.
+3. **Rebuild the design system, don't port the theme.** A WordPress theme's CSS doesn't translate cleanly to components — this is the point where a site usually ends up faster and more consistent than the original.
+4. **Redirect everything.** URL structure changes are where migrations lose their SEO ranking if you're not careful. Every old URL gets a proper redirect, not a best guess.
+5. **Ship, then measure.** Lighthouse and PageSpeed scores before and after make the case for the client better than anything I can say in a meeting.
+
+## The actual takeaway
+
+This isn't "WordPress is dead" — it's very much not, and it'll keep being the right tool for a large share of the web. It's that the default choice, the one you reach for without thinking, should depend on what the site actually needs to do. In 2026, for a product site, a portfolio, or anything where performance and control matter more than drag-and-drop editing, Next.js is where I start.
+
+If you're weighing this for your own site — whether that's migrating an existing WordPress install or starting something brand new — I'm always happy to talk through what would actually make sense for your case. [Get in touch](/contact).
+
+If that's the situation you're in — a WordPress site that's become more maintenance than asset, or a new project you'd rather start on the right foundation — it's the kind of work I take on. [Get in touch](/contact) and we can figure out what actually fits.
