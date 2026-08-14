@@ -7,6 +7,7 @@ export const metadata = {
   title: "About",
   description:
     "Josias is a developer and product builder focused on turning ideas into useful digital products.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

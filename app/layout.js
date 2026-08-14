@@ -11,13 +11,19 @@ const siteUrl = "https://josias-dev.vercel.app";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Josias — Developer & Product Builder",
+    default: "Josias Boco — Developer Building Fast Web Products",
     template: "%s · Josias.dev",
   },
   description:
     "Full-stack developer focused on building fast, modern and scalable web products. Explore projects like PhoneTimeline, TrimMyPDF and EarbudsTimeline.",
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": `${siteUrl}/blog/rss.xml`,
+    },
+  },
   openGraph: {
-    title: "Josias — Developer & Product Builder",
+    title: "Josias Boco — Developer Building Fast Web Products",
     description:
       "I build products people enjoy using. Full-stack developer focused on fast, modern, scalable web products.",
     url: siteUrl,
@@ -26,16 +32,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Josias — Developer & Product Builder",
+    title: "Josias Boco — Developer Building Fast Web Products",
     description: "I build products people enjoy using.",
   },
   verification: {
     google: "ZilcoLVCMEUHQtUAAU3aOgfPqvd9MSjazLClBqS-CVA",
-  },
-  alternates: {
-    types: {
-      "application/rss+xml": `${siteUrl}/blog/rss.xml`,
-    },
   },
 };
 

@@ -7,6 +7,7 @@ import { socials } from "@/data/socials";
 export const metadata = {
   title: "Contact",
   description: "Have an idea, project or opportunity? Get in touch with Josias.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

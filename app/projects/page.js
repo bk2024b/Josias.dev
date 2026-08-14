@@ -7,6 +7,7 @@ export const metadata = {
   title: "Projects",
   description:
     "Products, SaaS, client work and experiments built by Josias — including PhoneTimeline, TrimMyPDF and EarbudsTimeline.",
+  alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {

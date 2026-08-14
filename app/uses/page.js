@@ -5,6 +5,7 @@ import { uses } from "@/data/uses";
 export const metadata = {
   title: "Uses",
   description: "The hardware, tools and software Josias uses to build products.",
+  alternates: { canonical: "/uses" },
 };
 
 export default function UsesPage() {
