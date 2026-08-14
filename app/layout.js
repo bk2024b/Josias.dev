@@ -32,6 +32,11 @@ export const metadata = {
   verification: {
     google: "ZilcoLVCMEUHQtUAAU3aOgfPqvd9MSjazLClBqS-CVA",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${siteUrl}/blog/rss.xml`,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
