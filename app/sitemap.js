@@ -6,11 +6,13 @@ const siteUrl = "https://josias-dev.vercel.app";
 export default function sitemap() {
   const staticRoutes = [
     "",
+    "/services",
     "/projects",
     "/about",
+    "/blog",
+    "/start-project",
     "/uses",
     "/now",
-    "/blog",
     "/contact",
   ].map((route) => ({
     url: `${siteUrl}${route}`,
