@@ -10,43 +10,27 @@ const siteUrl = "https://josias-dev.vercel.app";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: "Josias Boco — Developer Building Fast Web Products",
-    template: "%s · Josias.dev",
-  },
-  description:
-    "Full-stack developer focused on building fast, modern and scalable web products. Explore projects like PhoneTimeline, TrimMyPDF and EarbudsTimeline.",
-  alternates: {
-    canonical: "/",
-    types: {
-      "application/rss+xml": `${siteUrl}/blog/rss.xml`,
-    },
-  },
-  openGraph: {
-    title: "Josias Boco — Developer Building Fast Web Products",
-    description:
-      "I build products people enjoy using. Full-stack developer focused on fast, modern, scalable web products.",
-    url: siteUrl,
-    siteName: "Josias.dev",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Josias Boco — Developer Building Fast Web Products",
-    description: "I build products people enjoy using.",
-  },
-  verification: {
-    google: "ZilcoLVCMEUHQtUAAU3aOgfPqvd9MSjazLClBqS-CVA",
-  },
+  title: { default: "Josias Boco — Freelance Web Developer", template: "%s · Josias.dev" },
+  description: "Freelance web developer building modern business websites, web applications, SaaS products and data-driven platforms for businesses and startups.",
+  keywords: ["freelance web developer", "web development services", "business website development", "web application development", "SaaS development", "MVP development", "website redesign"],
+  authors: [{ name: "Josias Boco", url: siteUrl }],
+  creator: "Josias Boco",
+  alternates: { canonical: "/", types: { "application/rss+xml": `${siteUrl}/blog/rss.xml` } },
+  openGraph: { title: "Josias Boco — Freelance Web Developer", description: "Modern websites, web applications and SaaS products built for businesses, founders and startups.", url: siteUrl, siteName: "Josias.dev", type: "website", locale: "en_US" },
+  twitter: { card: "summary_large_image", title: "Josias Boco — Freelance Web Developer", description: "Modern websites, web applications and SaaS products built for businesses and startups." },
+  robots: { index: true, follow: true },
+  verification: { google: "ZilcoLVCMEUHQtUAAU3aOgfPqvd9MSjazLClBqS-CVA" },
 };
+
+const personSchema = { "@context": "https://schema.org", "@type": "Person", name: "Josias Boco", url: siteUrl, jobTitle: "Freelance Web Developer", sameAs: ["https://github.com/bk2024b", "https://www.linkedin.com/in/josias-boco-70963a219/"] };
+const websiteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: "Josias.dev", url: siteUrl, description: "Freelance web development portfolio and services by Josias Boco." };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
