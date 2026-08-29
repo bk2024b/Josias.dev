@@ -2,6 +2,12 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "josias-dev.vercel.app"
+        }
+      ],
       "destination": "https://www.josiasdev.fr/$1",
       "permanent": true
     }
