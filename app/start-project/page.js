@@ -45,19 +45,36 @@ export default function StartProjectPage() {
           </div>
         </div>
 
-        <form action="mailto:josiasboco@gmail.com" method="post" encType="text/plain" className="space-y-8 rounded-3xl border border-border bg-surface p-6 sm:p-8">
+        <form action="https://formspree.io/f/mgaevlvp" method="POST" className="space-y-8 rounded-3xl border border-border bg-surface p-6 sm:p-8">
+          <input type="hidden" name="_subject" value="New project inquiry — Josias.dev" />
+          <input type="hidden" name="_gotcha" value="" />
+
           <ChoiceGroup label="What do you need?" name="project_type" options={types} />
+
           <div>
             <label htmlFor="message" className="text-sm font-medium text-foreground">Tell me about your project</label>
             <textarea id="message" name="message" required rows={7} placeholder="What are you trying to build?" className="mt-3 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-foreground-muted focus:border-accent" />
           </div>
+
           <ChoiceGroup label="What&apos;s your estimated budget?" name="budget" options={budgets} />
           <ChoiceGroup label="When would you like to start?" name="timeline" options={timelines} />
+
           <div className="grid gap-4 sm:grid-cols-2">
-            <div><label htmlFor="name" className="text-sm font-medium text-foreground">Name</label><input id="name" name="name" required className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" /></div>
-            <div><label htmlFor="email" className="text-sm font-medium text-foreground">Email</label><input id="email" name="email" type="email" required className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" /></div>
+            <div>
+              <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
+              <input id="name" name="name" required autoComplete="name" className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" />
+            </div>
+            <div>
+              <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
+              <input id="email" name="email" type="email" required autoComplete="email" className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" />
+            </div>
           </div>
-          <div><label htmlFor="company" className="text-sm font-medium text-foreground">Company / organization <span className="text-foreground-muted">(optional)</span></label><input id="company" name="company" className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" /></div>
+
+          <div>
+            <label htmlFor="company" className="text-sm font-medium text-foreground">Company / organization <span className="text-foreground-muted">(optional)</span></label>
+            <input id="company" name="company" autoComplete="organization" className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" />
+          </div>
+
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-foreground-muted">No commitment. Just tell me what you&apos;re trying to build.</p>
             <Button type="submit">Send project request →</Button>
