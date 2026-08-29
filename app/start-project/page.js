@@ -45,7 +45,7 @@ export default function StartProjectPage() {
           </div>
         </div>
 
-        <form action="mailto:hello@josias.dev" method="post" encType="text/plain" className="space-y-8 rounded-3xl border border-border bg-surface p-6 sm:p-8">
+        <form action="mailto:josiasboco@gmail.com" method="post" encType="text/plain" className="space-y-8 rounded-3xl border border-border bg-surface p-6 sm:p-8">
           <ChoiceGroup label="What do you need?" name="project_type" options={types} />
           <div>
             <label htmlFor="message" className="text-sm font-medium text-foreground">Tell me about your project</label>
