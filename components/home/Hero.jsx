@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "@/components/shared/Button";
 import { Badge } from "@/components/shared/Badge";
 import { SocialLink } from "@/components/shared/SocialLink";
@@ -15,29 +14,36 @@ export function Hero() {
 
       <Container className="grid gap-14 py-20 sm:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10">
         <div className="animate-fade-up">
-          <Badge dot>Available for new opportunities</Badge>
+          <Badge dot>Available for selected projects</Badge>
 
-          <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl">
-            Hi, I&apos;m <span className="text-accent">Josias</span>.
+          <h1 className="mt-6 text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-6xl">
+            I build modern websites
             <br />
-            I build products
+            and web applications
             <br />
-            people enjoy using.
+            <span className="text-accent">that help businesses grow.</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-base text-foreground-muted sm:text-lg">
-            Full-stack developer focused on building fast, modern and
-            scalable web products.
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground-muted sm:text-lg">
+            From high-performing business websites to SaaS platforms and
+            data-driven products, I turn ideas into fast, polished digital
+            experiences.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button href="/projects">View Projects →</Button>
-            <Button href="/contact" variant="secondary">
-              Contact Me →
+            <Button href="/start-project">Start a project →</Button>
+            <Button href="/projects" variant="secondary">
+              View my work →
             </Button>
           </div>
 
-          <div className="mt-10 flex gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-foreground-muted">
+            <span>Independent web developer</span>
+            <span aria-hidden="true">·</span>
+            <span>Remote worldwide</span>
+          </div>
+
+          <div className="mt-7 flex gap-3">
             {socials.map((s) => (
               <SocialLink key={s.label} {...s} />
             ))}
@@ -45,34 +51,36 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm animate-fade-in [animation-delay:150ms] opacity-0 [animation-fill-mode:forwards]">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border bg-surface">
-            <Image
-              src="/images/profile/josias.jpg"
-              alt="Josias"
-              fill
-              sizes="(min-width: 1024px) 384px, 100vw"
-              className="object-cover"
-              priority
-            />
-          </div>
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border bg-surface p-6 sm:p-8">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-border/70 bg-background/70 p-5 backdrop-blur-sm sm:p-6">
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-foreground-muted">
+                  What I build
+                </p>
+                <div className="mt-5 space-y-3">
+                  {[
+                    "Business websites",
+                    "Web applications",
+                    "SaaS & MVPs",
+                    "Data-driven products",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3 rounded-xl border border-border bg-surface/70 px-3 py-3 text-sm">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-          <div className="absolute -bottom-8 -left-6 w-64 rounded-xl border border-border bg-surface/95 p-4 shadow-2xl shadow-black/40 backdrop-blur sm:-left-10">
-            <p className="text-[11px] font-medium uppercase tracking-wide text-foreground-muted">
-              Building in public
-            </p>
-            <pre className="mt-2 overflow-x-auto text-[11px] leading-relaxed text-foreground-muted">
-              <code>
-                <span className="text-accent">1</span> {"while (building) {"}
-                {"\n"}
-                <span className="text-accent">2</span> {"  learn();"}
-                {"\n"}
-                <span className="text-accent">3</span> {"  ship();"}
-                {"\n"}
-                <span className="text-accent">4</span> {"  impact();"}
-                {"\n"}
-                <span className="text-accent">5</span> {"}"}
-              </code>
-            </pre>
+              <div className="mt-8 rounded-xl border border-border bg-surface/80 p-4">
+                <p className="text-[11px] font-medium uppercase tracking-wide text-foreground-muted">
+                  From idea to launch
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-foreground-muted">
+                  Strategy, design, development and launch — handled end to end.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
