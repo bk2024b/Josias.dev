@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: { title: "Josias Boco — Freelance Web Developer", description: "Modern websites, web applications and SaaS products built for businesses, founders and startups.", url: siteUrl, siteName: "Josias.dev", type: "website", locale: "en_US" },
   twitter: { card: "summary_large_image", title: "Josias Boco — Freelance Web Developer", description: "Modern websites, web applications and SaaS products built for businesses and startups." },
   robots: { index: true, follow: true },
-  verification: { google: "ZilcoLVCMEUHQtUAAU3aOgfPqvd9MSjazLClBqS-CVA" },
+  verification: { google: "Fzfl8nH3UfMN9NxmAjDNU_GiVGhmvcU-0F2PlDRDzdE" },
 };
 
 const personSchema = { "@context": "https://schema.org", "@type": "Person", name: "Josias Boco", url: siteUrl, jobTitle: "Freelance Web Developer", sameAs: ["https://github.com/bk2024b", "https://www.linkedin.com/in/josias-boco-70963a219/"] };
